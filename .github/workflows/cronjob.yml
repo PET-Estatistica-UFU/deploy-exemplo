@@ -15,9 +15,6 @@ jobs:
         with:
           # The R version to download (if necessary) and use.
           r-version: '3.6.3'
-          # uses the RStudio Package Manager
-          use-public-rspm: true
-
 
       - name: Install packages
         uses: r-lib/actions/setup-r-dependencies@v2
