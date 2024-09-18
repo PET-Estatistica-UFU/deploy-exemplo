@@ -6,11 +6,11 @@ on:
 name: Update data
 
 jobs:
-  import-data:
+  updade-data:
     runs-on: ubuntu-latest
     steps:
       - name: Set up R
-        uses: r-lib/actions/setup-r@v3
+        uses: r-lib/actions/setup-r@v2
 
       - name: Install packages
         uses: r-lib/actions/setup-r-dependencies@v2
