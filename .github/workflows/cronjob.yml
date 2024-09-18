@@ -34,10 +34,6 @@ jobs:
       - name: Import data
         run: Rscript -e 'source("dia1.R")'
 
-      - name: Commit results
-        run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "${{ env.CI_COMMIT_AUTHOR }}"
-          git add teste.RData
-          git commit -a -m 'Data updated'
-          git push 
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+            commit_message: data updated
