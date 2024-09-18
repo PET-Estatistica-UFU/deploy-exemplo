@@ -8,6 +8,10 @@ name: Update data
 jobs:
   updade-data:
     runs-on: ubuntu-latest
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
     steps:
       # that installs R on the machine
       - name: Set up R
@@ -34,6 +38,7 @@ jobs:
       - name: Import data
         run: Rscript -e 'source("dia1.R")'
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      # Commit all changed files back to the repository
+      - uses: stefanzweifel/git-auto-commit-action@v5
         with:
             commit_message: data updated
