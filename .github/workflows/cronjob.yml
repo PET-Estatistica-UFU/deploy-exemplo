@@ -69,12 +69,9 @@ jobs:
             any::ggplot2
             any::stringr
 
-      - name: Install pak
-        run: |
-          install.packages("pak")
-
       - name: Install Dependencies
         run: |
+          Rscript -e "install.packages("pak")"
           Rscript -e "options(pak.verbose = TRUE)"
           Rscript -e "pak::pkg_install('stringr')"
 
