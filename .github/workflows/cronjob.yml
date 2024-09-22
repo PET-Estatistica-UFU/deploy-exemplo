@@ -61,6 +61,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          Rscript -e 'options(repos = c(CRAN = "https://cloud.r-project.org/"))'
           Rscript -e 'install.packages("rsconnect")'
           Rscript -e 'install.packages("shiny")'
           Rscript -e 'install.packages("ggplot2")'
