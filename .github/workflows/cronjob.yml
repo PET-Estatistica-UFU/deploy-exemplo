@@ -55,6 +55,8 @@ jobs:
         with:
           # The R version to download (if necessary) and use.
           r-version: '4.3.2'
+          # uses the RStudio Package Manager
+          use-public-rspm: true
 
       # Install packages
       - name: Install packages
@@ -64,8 +66,7 @@ jobs:
           packages: |
             any::rsconnect
             any::shiny
-            any::ggplot2  
-          extra-packages: |
+            any::ggplot2
             any::stringr
 
       # - name: Install pak
