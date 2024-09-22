@@ -64,10 +64,13 @@ jobs:
         with:
           packages: |
             any::rsconnect
-            any::stringr
             any::shiny
             any::ggplot2
           dependencies: '"hard"'
+          cache: true
+          extra-packages: |
+            any::stringr
+            any::gtable
 
       # to access the code inside our repository
       - name: Check out repository
