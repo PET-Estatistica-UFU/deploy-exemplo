@@ -7,7 +7,7 @@ env:
   TOKEN: ${{ secrets.TOKEN }}
   SECRET: ${{ secrets.SECRET }}
 
-name: Update data in ${{ vars.NAME }}
+name: Update data
 
 jobs:
   updade-data:
@@ -17,6 +17,10 @@ jobs:
       # added or changed files to the repository.
       contents: write
     steps:
+      - name: Use variables
+        run: |
+          echo "repository variable : $NAME"
+
       # that installs R on the machine
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
