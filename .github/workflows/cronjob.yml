@@ -67,13 +67,10 @@ jobs:
             any::rsconnect
             any::shiny
             any::ggplot2
-            any::stringr
-
+            
       - name: Install Dependencies
         run: |
-          Rscript -e "install.packages("pak")"
-          Rscript -e "options(pak.verbose = TRUE)"
-          Rscript -e "pak::pkg_install('stringr')"
+          Rscript -e "install.packages("stringr")"
 
 
       # to access the code inside our repository
