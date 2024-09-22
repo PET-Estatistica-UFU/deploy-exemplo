@@ -3,9 +3,9 @@ on:
     - cron:  "0 0 31 * *" 
   workflow_dispatch:
 env:
-  NAME: ${{ vars.NAME }}
-  TOKEN: ${{ secrets.TOKEN }}
-  SECRET: ${{ secrets.SECRET }}
+  NAME: ${{ vars.rsconnect.NAME }}
+  TOKEN: ${{ secrets.rsconnect.TOKEN }}
+  SECRET: ${{ secrets.rsconnect.SECRET }}
 
 name: Update data
 
