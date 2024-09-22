@@ -70,7 +70,7 @@ jobs:
             
       - name: Install Dependencies
         run: |
-          Rscript -e "install.packages("stringr")"
+          Rscript -e 'install.packages("stringr")'
 
 
       # to access the code inside our repository
