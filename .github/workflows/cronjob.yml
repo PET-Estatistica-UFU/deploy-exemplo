@@ -64,8 +64,10 @@ jobs:
         with:
           packages: |
             any::rsconnect
+            any::stringr
+            any::shiny
+            any::ggplot2
           dependencies: '"hard"'
-          extra-packages: any::stringr
 
       # to access the code inside our repository
       - name: Check out repository
