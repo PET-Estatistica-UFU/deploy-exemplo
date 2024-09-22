@@ -55,22 +55,29 @@ jobs:
         with:
           # The R version to download (if necessary) and use.
           r-version: '4.3.2'
-          # uses the RStudio Package Manager
-          use-public-rspm: true
 
       # Install packages
       - name: Install packages
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
+          cache: true
           packages: |
             any::rsconnect
             any::shiny
-            any::ggplot2
-          dependencies: '"hard"'
-          cache: true
+            any::ggplot2  
           extra-packages: |
             any::stringr
-            any::gtable
+
+      # - name: Install pak
+      # run: |
+      #   install.packages("pak")
+
+      # - name: Install Dependencies
+      # run: |
+      #   Rscript -e "options(pak.verbose = TRUE)"
+      #   Rscript -e "pak::pkg_install('stringr')"
+      #   Rscript -e "pak::pkg_install('gtable')"
+
 
       # to access the code inside our repository
       - name: Check out repository
