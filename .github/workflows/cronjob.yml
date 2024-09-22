@@ -37,6 +37,8 @@ jobs:
             any::dplyr
             any::stringr
             any::rsconnect
+            any::stringr
+            any::BiocManager
 
       # to access the code inside our repository
       - name: Check out repository
