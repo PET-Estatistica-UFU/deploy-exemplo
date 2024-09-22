@@ -72,6 +72,7 @@ jobs:
 
       # deploy
       - name: deploy
+        needs: updade-data
         run: Rscript -e 'source("deploy.R")'
         env:
           NAME: ${{ vars.NAME }}
