@@ -22,7 +22,6 @@ jobs:
           echo "repository variable : ${{ vars.rsconnect.NAME }}"
           echo "repository variable : ${{ vars.NAME }}"
           echo "repository variable : ${{ env.NAME }}"
-          echo "repository variable : ${{ rsconnect.NAME }}"
 
       # that installs R on the machine
       - name: Set up R
