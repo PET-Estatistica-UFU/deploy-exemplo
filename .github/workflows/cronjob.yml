@@ -57,6 +57,7 @@ jobs:
           r-version: '4.3.2'
           # uses the RStudio Package Manager
           use-public-rspm: true
+          extra-repositories: "https://cloud.r-project.org/"
 
       # Install packages
       - name: Install packages
