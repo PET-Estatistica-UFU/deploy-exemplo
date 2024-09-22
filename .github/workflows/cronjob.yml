@@ -46,6 +46,7 @@ jobs:
             commit_message: data updated
 
   deploy-shiny:
+    needs: updade-data
     runs-on: ubuntu-latest
     steps:
       # that installs R on the machine
@@ -61,7 +62,7 @@ jobs:
       - name: Install packages
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: |
+          packages: |
             any::rsconnect
 
       # deploy
