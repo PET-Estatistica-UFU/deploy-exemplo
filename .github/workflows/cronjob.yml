@@ -46,7 +46,7 @@ jobs:
             commit_message: data updated
 
   deploy-shiny:
-    needs: updade-data
+    # needs: updade-data
     runs-on: ubuntu-latest
     steps:
       # that installs R on the machine
