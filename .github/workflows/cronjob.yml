@@ -2,10 +2,7 @@ on:
   schedule: 
     - cron:  "0 0 31 * *" 
   workflow_dispatch:
-env:
-  NAME: ${{ vars.rsconnect.NAME }}
-  TOKEN: ${{ secrets.rsconnect.TOKEN }}
-  SECRET: ${{ secrets.rsconnect.SECRET }}
+
 
 name: Update data
 
@@ -19,9 +16,8 @@ jobs:
     steps:
       - name: Use variables
         run: |
-          echo "repository variable : ${{ vars.rsconnect.NAME }}"
-          echo "repository variable : ${{ vars.NAME }}"
-          echo "repository variable : ${{ secrets.SECRET }}"
+          echo "repository variable : ${{ env.NAME }}
+          echo "repository variable : ${{ secrets.TOKEN }}
 
       # that installs R on the machine
       - name: Set up R
@@ -58,4 +54,7 @@ jobs:
       # deploy
       - name: deploy
         run: Rscript -e 'source("deploy.R")'
-        
+        env:
+          NAME: ${{ env.NAME }}
+          TOKEN: ${{ secrets.TOKEN }}
+          SECRET: ${{ secrets.SECRET }}
