@@ -70,13 +70,13 @@ jobs:
             any::stringr
 
       - name: Install pak
-      run: |
-        install.packages("pak")
+        run: |
+          install.packages("pak")
 
       - name: Install Dependencies
-      run: |
-        Rscript -e "options(pak.verbose = TRUE)"
-        Rscript -e "pak::pkg_install('stringr')"
+        run: |
+          Rscript -e "options(pak.verbose = TRUE)"
+          Rscript -e "pak::pkg_install('stringr')"
 
 
       # to access the code inside our repository
