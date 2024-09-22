@@ -32,7 +32,7 @@ jobs:
       - name: Install packages
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          packages: |
+          extra-packages: |
             any::rvest 
             any::dplyr
             any::stringr
