@@ -21,7 +21,7 @@ jobs:
         run: |
           echo "repository variable : ${{ vars.rsconnect.NAME }}"
           echo "repository variable : ${{ vars.NAME }}"
-          echo "repository variable : ${{ env.NAME }}"
+          echo "repository variable : ${{ secrets.SECRET }}"
 
       # that installs R on the machine
       - name: Set up R
