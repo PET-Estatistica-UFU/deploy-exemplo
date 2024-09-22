@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Use variables
         run: |
-          echo "repository variable : ${{ env.NAME }}
+          echo "repository variable : ${{ vars.NAME }}
           echo "repository variable : ${{ secrets.TOKEN }}
 
       # that installs R on the machine
@@ -55,6 +55,6 @@ jobs:
       - name: deploy
         run: Rscript -e 'source("deploy.R")'
         env:
-          NAME: ${{ env.NAME }}
+          NAME: ${{ vars.NAME }}
           TOKEN: ${{ secrets.TOKEN }}
           SECRET: ${{ secrets.SECRET }}
