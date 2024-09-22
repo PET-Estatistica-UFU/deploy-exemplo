@@ -2,8 +2,12 @@ on:
   schedule: 
     - cron:  "0 0 31 * *" 
   workflow_dispatch:
+env:
+  NAME: ${{ vars.NAME }}
+  TOKEN: ${{ secrets.TOKEN }}
+  SECRET: ${{ secrets.SECRET }}
 
-name: Update data
+name: Update data in ${{ vars.NAME }}
 
 jobs:
   updade-data:
@@ -48,7 +52,4 @@ jobs:
       # deploy
       - name: deploy
         run: Rscript -e 'source("deploy.R")'
-        env:
-          NAME: ${{ vars.NAME }}
-          TOKEN: ${{ secrets.TOKEN }}
-          SECRET: ${{ secrets.SECRET }}
+        
