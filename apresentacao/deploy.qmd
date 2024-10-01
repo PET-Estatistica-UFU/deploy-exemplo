@@ -4,6 +4,7 @@ format:
   revealjs:
     theme: [default, style.scss]
     footer: 'PET Estatística'
+    logo: 'Logo_vermelha_contorno-branco.png'
 ---
 
 #  {.title}
