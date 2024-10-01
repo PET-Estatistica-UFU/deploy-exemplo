@@ -32,6 +32,7 @@ Imprementação. No contexto da tecnologia e software, refere-se ao processo de 
 - [CircleCI]{.red}
 - [Kubernetes]{.orange}
 - [GitLab CI/CD]{.red}
+- [Apache Airflow]{.orange}
 :::
 :::
 :::
@@ -88,4 +89,30 @@ Para que GitHub consiga ver seus [workflows]{.orange} GitHub Actions do reposit�
 
 ::: r-fit-text
 [VAMOS VER UM CÓDIGO...]{.flow}
+:::
+
+#  {.title}
+
+::: r-fit-text
+[GITHUB ORGANIZATION]{.flow}
+:::
+
+#
+
+![](Captura3.png){fig-align="center"}
+
+## GitHub Organizations oferece algumas vantagens:
+
+<br><br><br>
+
+::: incremental
+
+- [Colaboração]{.red}
+
+:::
+
+#  {.title}
+
+::: r-fit-text
+[FIM!]{.flow}
 :::
