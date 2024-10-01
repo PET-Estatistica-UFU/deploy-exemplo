@@ -1,10 +1,9 @@
+name: Meu workflow
+
 on:
   schedule: 
     - cron:  "0 0 31 * *" 
   workflow_dispatch:
-
-
-name: Update data
 
 jobs:
   updade-data:

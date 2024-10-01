@@ -1,0 +1,90 @@
+---
+author: "Bruno Mesquita"
+format: 
+  revealjs:
+    theme: [default, style.scss]
+    footer: 'PET Estatística'
+---
+
+#  {.title}
+
+::: r-fit-text
+[DEPLOYMENT]{.flow}
+:::
+
+::: {.notes}
+Imprementação. No contexto da tecnologia e software, refere-se ao processo de colocar um aplicativo ou sistema em funcionamento para que os usuários possam utilizá-lo. É a etapa final onde o software é transferido de um ambiente de desenvolvimento para um ambiente de produção.
+:::
+
+##  {background-image="question.jpg" background-size="contain" background-position="left"}
+
+::: columns
+::: {.column width="40%"}
+:::
+
+::: {.column width="60%"}
+### Algumas ferramentas de deploy no mercado:
+
+::: incremental
+- [Jenkins]{.red}
+- [GitHub Actions]{.orange}
+- [CircleCI]{.red}
+- [Kubernetes]{.orange}
+- [GitLab CI/CD]{.red}
+:::
+:::
+:::
+
+# QUAL VAMOS USAR? {.textcenter}
+
+##  {background-image="https://devdosvid.blog/2020/03/18/github-actions-first-impression/cover-image.png"}
+
+## MOTIVOS
+
+<br><br><br>
+
+::: incremental
+- Integração Direta com GitHub
+- Suporte a Diversas Linguagens e Ferramentas
+- Gratuito para Projetos de Código Aberto
+- Integração com Marketplace
+:::
+
+
+#  {.title}
+
+::: r-fit-text
+[BORA ENTENDER MAIS]{.flow}
+:::
+
+## ESTRUTURA DE ARQUIVO {.textcenter}
+
+Para que GitHub consiga ver seus [workflows]{.orange} GitHub Actions do repositório, você deverá salvar os arquivos do em um diretório chamado [.github/workflows]{.red}.
+
+É possível dar ao arquivo de [workflows]{.orange} qualquer nome, mas você deverá usar [.yml]{.red} ou [.yaml]{.red} como a extensão de nome de arquivo. YAML é uma linguagem de marcação comumente usada para arquivos de configuração.
+
+![](Captura1.png)
+
+## COMANDOS BASICOS YAML GITHUB ACTION {.text}
+
+[name]{.red}: Nome do [workflows]{.orange}
+
+[on]{.red}: Use "on" para definir quais eventos podem fazer o [workflows]{.orange} ser executado.
+
+> [schedule - push - pull_request - workflow_dispatch]{.orange}
+
+![](Captura2.png){fig-align="center"}
+
+
+## CONTINUANDO COMANDOS
+- [jobs]{.red}: A execução do [workflows]{.orange} é composta por um ou mais jobs, que são executados em paralelo ou em sequência.
+  - [runs-on]{.red}: Define o ambiente em que o job será executado.
+  - [steps]{.red}: são as ações individuais dentro de um job. Cada step executa uma tarefa específica, como rodar um script.
+    - [uses]{.red}: refere-se a uma ação que um job vai usar. Essa ação pode ser criada por outro usuário do GitHub ou ser uma ação padrão do GitHub.
+    - [run]{.red}: Comando a ser executado.
+
+#  {.title}
+
+::: r-fit-text
+[VAMOS VER UM CÓDIGO...]{.flow}
+:::
